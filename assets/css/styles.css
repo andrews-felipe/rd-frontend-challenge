@@ -1,35 +1,138 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif !important;
 }
 *:focus {
-    outline: 0;
+  outline: 0;
 }
-html, body, #app {
-    height: 100%;
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6% 0 6% 0;
+  
 }
-body, input, button {
-    font: 14px 'Roboto', sans-serif;
-}
+body,
+input,
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    background: linear-gradient(-45deg, #aaa 25%, #eee 100%);
-    background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(-45deg, #aaa 25%, #eee 100%);
+  background-attachment: fixed;
 }
 
-/**
-* YOUR CODE HERE
-*/
+.logo {
+  width: 60px;
+  margin-bottom: 5px;
+}
+
+.login {
+  width: 30%;
+  background-color: #e6e6e6;
+  padding: 15px;
+  border-radius: 20px 0 20px 0;
+  margin-top: 15px;
+}
+
+input,
+button {
+  background-color: #d9d9d9;
+  border: none;
+  width: 100%;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+}
+
+button:enabled {
+  background-color: #24913e;
+}
+
+button:hover {
+  background-color: #30ba50;
+}
+
+.flex {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.item {
+  height: 45px;
+  background: white;
+  color: black;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 6px #0000001c;
+  cursor: pointer;
+  flex-grow: 1;
+  animation: intro ease-in-out 0.5s;
+}
+
+.item:hover {
+  background: #f5fdff;
+}
+
+.item p {
+  font-weight: 400;
+}
+
+.mask {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.mask img {
+  width: 100%;
+  filter: grayscale(1);
+}
+.mask img:hover {
+  filter: grayscale(0);
+}
+
+.mask:hover {
+  transform: scale(1.4);
+}
+
+@keyframes intro {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
